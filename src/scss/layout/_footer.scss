@@ -1,0 +1,75 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer {
+    background-color: v.$verdeOsc;
+    text-align: center;
+    .contenido-footer {
+        padding: 2rem;
+        @include m.gadget {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+   
+}
+
+.navegacion-principal{
+    @include m.gadget {
+        display: flex;
+        gap: 2rem;
+    }
+    a {
+        display: block;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+         @include m.gadget {
+            margin-bottom: 0;
+         }
+        
+        &:hover {
+            color: v.$verdeLight;
+        }
+    }
+
+}  
+
+
+
+.logos {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    @include m.gadget {
+        margin-bottom: 0;
+    }
+}
+
+.derechos {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0 0 2rem 0;
+    margin: 0;
+}
+
+.powered {
+    background-color: v.$verdeCla;
+    p {
+        margin: 0;
+        color: #fff;
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 1.2rem;
+    }
+ align-items: center;
+ padding: 1rem;
+
+}
+
+.animaz {
+    font-weight: 900;
+    color: #fff;
+}

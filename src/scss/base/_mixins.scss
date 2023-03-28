@@ -1,0 +1,13 @@
+@use 'variables' as v;
+
+@mixin gadget {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin grid ($columnas, $espaciado) {
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado;
+    padding: 3rem 0;
+}

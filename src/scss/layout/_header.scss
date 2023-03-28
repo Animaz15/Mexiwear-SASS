@@ -1,0 +1,157 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    background-color: v.$verdeGral;
+@include m.gadget {
+    &.fijo {
+        left: o;
+        top: 0;
+        position: fixed;
+        width: 100%;
+        box-shadow: .1rem .2rem .3rem #333;
+    }
+}
+   
+    text-align: center;
+    .contenido-header {
+        padding: 2rem;
+        @include m.gadget {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+   
+}
+
+.navegacion-principal{
+    @include m.gadget {
+        display: flex;
+        gap: 2rem;
+    }
+    a {
+        display: block;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+         @include m.gadget {
+            margin-bottom: 0;
+         }
+        
+        &:hover {
+            color: v.$verdeLight;
+        }
+    }
+    z-index: 10;
+}  
+
+
+
+.logos {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    @include m.gadget {
+        margin-bottom: 0;
+    }
+}
+.botones {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+    @include m.gadget {
+       display: flex;
+       justify-content: space-evenly;
+    }
+}
+
+.boton {
+    background-color: v.$verdeLight;
+    color: v.$verdeOsc;
+    font-weight: 600;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    &:hover {
+        background-color: v.$verdeCla;
+        color: #fff;
+    }
+}
+
+.lang-inact {
+    color: v.$verdeCla;
+    font-weight: 600;
+  
+}
+
+.lang-act {
+    color: v.$verdeLight;
+    font-weight: 600;
+    &:hover{
+        color: v.$verdeCla;
+    }
+}
+
+.check {
+    position: relative;
+    width: 5rem;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 5rem;
+        height: 2.5rem;
+        background: #656666;
+        border-radius: 2.5rem;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 2.5rem;
+        border-radius: 3rem;
+        background: #fff;
+        
+        transition: 0.25s;
+        border: 2px solid #656666;
+        z-index: 10;
+        // box-sizing: border-box;
+    }
+
+   
+
+    &:checked:before {
+        background: v.$verdeLight;
+    }
+}
+
+.check:checked:after {
+    left: 2rem;
+    border: 2px solid v.$verdeLight;
+}
+
+.flags {
+
+    width: 8rem;
+ display: flex;
+   margin: 0 auto;
+ justify-content: center;
+ 
+
+    //     display: block;
+    //     cursor: pointer;
+    // }
+}
+
+.flags_item {
+    width: 3rem;
+    
+}
+
+.flags_img {
+    // display: block;
+    cursor: pointer;
+}
