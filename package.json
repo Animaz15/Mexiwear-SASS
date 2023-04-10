@@ -1,13 +1,16 @@
 {
   "name": "mexiwear-sass",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Proyecto Mexiwear con SASS, GULP y HTML",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "anymatch": "^3.1.3",
     "binary-extensions": "^2.2.0",
+    "body-parser": "^1.20.2",
     "braces": "^3.0.2",
     "chokidar": "^3.5.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
     "fill-range": "^7.0.1",
     "glob-parent": "^5.1.2",
     "immutable": "^4.3.0",
@@ -33,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Animaz15/Mexiwear.git"
+    "url": "git+https://github.com/Animaz15/Mexiwear-SASS.git"
   },
   "keywords": [
     "SASS",

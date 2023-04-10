@@ -120,7 +120,13 @@
     width: 100%;
     max-width: 30rem;
     z-index: 5;
+    
+}
+
+.centrar {
   
+    display: flex;
+    align-items: center;
 }
 
 .playera {
@@ -149,4 +155,62 @@
 
 opacity: 1;
 
+}
+
+.estampados {
+    margin: 5rem;
+}
+
+.contenedor-playeras {
+    color: v.$grisOsc;
+    @include m.gadget {
+        display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    }
+    justify-content: center;
+    text-align: center;
+    ul {
+        list-style-position: inside;
+        margin: 2rem auto 5rem auto;
+        font-size: 1.6rem;
+    }
+    gap: 4rem;
+}
+
+.sobreimagen {
+    position: absolute;
+  bottom: 0;
+  background: rgb(6,321,119);
+  background: rgba(6,321,119, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.contenedor-shirt {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    z-index: 5;
+    
+    
+}
+
+.contenedor-shirt:hover .sobreimagen {
+
+opacity: 1;
+
+}
+
+.shirts {
+    @include m.gadget {
+        margin: 0;
+    }
+    margin-top: 5rem;
 }
